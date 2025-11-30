@@ -1,0 +1,28 @@
+{
+  "name": "markdown-pad-server",
+  "version": "1.0.0",
+  "description": "The backend server for markdown-pad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wraththevengeful/markdown-pad-server.git"
+  },
+  "keywords": [
+    "Blog",
+    "ExpressJS",
+    "Javascript",
+    "REST",
+    "API",
+    "REST",
+    "API"
+  ],
+  "author": "wraththevengeful",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wraththevengeful/markdown-pad-server/issues"
+  },
+  "homepage": "https://github.com/wraththevengeful/markdown-pad-server#readme"
+}
