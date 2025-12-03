@@ -1,13 +1,17 @@
-CREATE TABLE users(
+CREATE TABLE IF NOT EXISTS users(
     id SERIAL, 
     username VARCHAR(20) UNIQUE NOT NULL,
     full_name TEXT NOT NULL,
     password_hash TEXT NOT NULL,
     created_at TIMESTAMPTZ DEFAULT NOW(),
+    isAdmin BOOLEAN DEFAULT FALSE,
     PRIMARY KEY(id)
 );
 
-CREATE TABLE posts(
+-- Example inserts
+INSERT INTO users (username, full_name, password_hash) VALUES ('wraththevengeful', 'Elanchezhiyan E', 'poornashreethirumalai');
+
+CREATE TABLE IF NOT EXISTS posts(
     id SERIAL, 
     username VARCHAR(20) NOT NULL, 
     title TEXT NOT NULL,
@@ -20,7 +24,7 @@ CREATE TABLE posts(
     FOREIGN KEY (username) REFERENCES users(username) ON UPDATE CASCADE
 );
 
-CREATE TABLE comments(
+CREATE TABLE IF NOT EXISTS comments(
     id SERIAL,
     post_id INT REFERENCES posts(id) ON DELETE CASCADE, 
     full_name TEXT NOT NULL, 
